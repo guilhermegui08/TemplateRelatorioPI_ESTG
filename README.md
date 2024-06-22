@@ -43,5 +43,13 @@ This repository contains a LaTeX template for dissertations, project reports, or
    @default_files = qw(aux bbl blg idx ilg ind lof log lot out toc acn acr alg glg glo gls);
    @generated_exts = (@default_files, qw(fls fdb_latexmk synctex.gz));
    
-   1;```
+   1;
 
+2. **Compilation Process**
+
+- Use `latexmk` to compile your document. It will handle multiple passes and dependencies automatically.
+
+
+## License
+
+This project is licensed under the [GPL-3.0](LICENSE).
