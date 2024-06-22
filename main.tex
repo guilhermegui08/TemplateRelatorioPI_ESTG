@@ -1,0 +1,249 @@
+\documentclass[a4paper,12pt,twoside]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[style=apa, backend=biber]{biblatex}
+\addbibresource{references.bib}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{amsmath}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue]{hyperref}
+\usepackage{lipsum}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{ragged2e}
+\usepackage{afterpage}
+\usepackage{times}
+\usepackage{array}
+\usepackage[acronym,toc,nonumberlist]{glossaries}
+
+\makeglossaries
+
+\newacronym{MS}{MS}{Microsoft}
+\newacronym{CD}{CD}{Compact Disc}
+\newacronym{Mac}{Mac}{Short form of Apple Mac}
+\newacronym{gcd}{GCD}{Greatest Common Divisordd}
+\newacronym{lcm}{LCM}{Least Common Multipledd}
+\newacronym{estg}{ESTG}{Escola Superior de Tecnologia e Gestão}
+
+
+
+% Definições de margens
+\usepackage{geometry}
+\geometry{a4paper, outer=2.5cm, top=2.5cm, bottom=2.5cm, inner=3cm}
+
+% Configuração do fancyhdr
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{Título do Documento} % Coloque o título do documento aqui
+\fancyfoot[R]{\thepage}
+
+% Comandos para formatação específica
+\newcommand{\titulo}[1]{\title{#1}}
+\newcommand{\autor}[1]{\author{#1}}
+\newcommand{\data}[1]{\date{#1}}
+
+% Espaçamento entre linhas
+\onehalfspacing
+% Espaçamento entre parágrafos
+\setlength{\parskip}{\baselineskip}
+
+% Títulos em itálico para palavras estrangeiras
+\titleformat{\chapter}[hang]{\normalfont\huge\bfseries}{\thechapter.}{20pt}{\huge\bfseries}
+\titleformat{\section}[hang]{\normalfont\Large\bfseries}{\thesection.}{20pt}{\Large\bfseries}
+\titleformat{\subsection}[hang]{\normalfont\large\bfseries}{\thesubsection.}{20pt}{\large\bfseries}
+
+% Remove gap before chapters
+\titlespacing*{\chapter}{0pt}{-40pt}{0pt}
+\titlespacing*{\section}{0pt}{0pt}{0pt}
+\titlespacing*{\subsection}{0pt}{0pt}{0pt}
+
+% Personalização do título do índice
+%\renewcommand{\listfigurename}{Lista de Figuras}
+%\renewcommand{\listtablename}{Lista de Tabelas}
+
+% Inserir página em branco
+\newcommand\blankpage{
+	\null
+	\thispagestyle{plain}
+	\addtocounter{page}{0}
+	\newpage}
+
+% Redefine the Table of Contents environment
+\usepackage{tocbasic}
+\DeclareTOCStyleEntry[
+beforeskip=0pt, % Adjusts the spacing before each entry
+pagenumberwidth=2em, % Adjusts the space for page numbers
+]{tocline}{chapter}
+\DeclareTOCStyleEntry[
+beforeskip=0pt,
+pagenumberwidth=2em,
+]{tocline}{section}
+\DeclareTOCStyleEntry[
+beforeskip=0pt,
+pagenumberwidth=2em,
+]{tocline}{subsection}
+
+% Define a new command to single space the TOC
+\let\oldtableofcontents\tableofcontents
+\renewcommand{\tableofcontents}{
+	\begingroup
+	\setstretch{1} % Set the spacing for the TOC to single
+	\oldtableofcontents
+	\endgroup
+}
+
+\begin{document}
+	% Capa
+	\begin{titlepage}
+		\centering
+		\includegraphics[width=0.8\textwidth]{imagens/logo.png} % Adicione o caminho para o logotipo da escola
+		\vspace*{1cm}
+		
+		\Huge
+		\textbf{Título do trabalho}
+		
+		\vspace{1.5cm}
+		
+		\LARGE
+		Licenciatura em Engenharia Informática
+		
+		\vfill
+		
+		\Large
+		Nome completo do Candidato
+		
+		\vspace{0.8cm}
+		
+		\normalsize
+		Leiria, junho de 2024
+		
+		
+		\vspace{1.5cm}
+	\end{titlepage}
+	
+	% Página de rosto
+	\begin{titlepage}
+		\pagenumbering{roman}
+		\centering
+		\includegraphics[width=0.8\textwidth]{imagens/logo.png} % Adicione o caminho para o logotipo da escola
+		\vspace*{1cm}
+		
+		\Huge
+		\textbf{Título do trabalho}
+		
+		\vspace{1.5cm}
+		
+		\LARGE
+		Licenciatura em ...
+		
+		\vfill
+		
+		\Large
+		Nome completo do Candidato
+		
+		\vspace{0.8cm}
+		
+		\justifying
+		\normalsize
+		Trabalho de Projeto da unidade curricular de Projeto Informático realizado sob a orientação do(a) Professor(a) Doutor(a) \underline{\hspace{3cm}} e do(a) Professor(a) Doutor(a) \underline{\hspace{3cm}}.
+		
+		\centering
+		\vspace{0.8cm}
+		
+		\normalsize
+		Cidade, mês de ano
+		
+		\vspace{1.5cm}
+	\end{titlepage}
+	
+	
+	% Numeração em algarismos romanos até o índice
+	\pagestyle{plain} % Para garantir que o estilo plain é aplicado na capa e folha de rosto
+	
+	% Dedicatória (opcional)
+	\chapter*{Dedicatória}
+	\addcontentsline{toc}{chapter}{Dedicatória}
+	\lipsum[1]
+	
+	% Agradecimentos (opcional)
+	\chapter*{Agradecimentos}
+	\addcontentsline{toc}{chapter}{Agradecimentos}
+	\lipsum[1]
+	
+	% Resumo
+	\chapter*{Resumo}
+	\addcontentsline{toc}{chapter}{Resumo}
+	\lipsum[1]
+	\newline\newline\newline
+	\textbf{Palavras-chave:} palavra1, palavra2, palavra3, palavra4, palavra5, palavra6
+	
+	% Abstract
+	\chapter*{Abstract}
+	\addcontentsline{toc}{chapter}{Abstract}
+	\lipsum[1]
+	\newline\newline\newline
+	\textbf{Keywords:} keyword1, keyword2, keyword3, keyword4, keyword5, keyword6
+	
+	% Índice
+	\renewcommand{\contentsname}{Índice}
+	\tableofcontents
+	\listoffigures
+	\listoftables
+	
+	% Lista de siglas
+	\printglossary[type=\acronymtype,style=long, title={Lista de siglas e acrónimos}]
+	\afterpage{\blankpage}
+	
+	% Numeração em algarismos arábicos a partir do corpo do texto
+	\clearpage
+	\pagestyle{fancy} % Reinicia o estilo fancy a partir do corpo do texto
+	\pagenumbering{arabic}
+	
+	% Introdução
+	\chapter{Introdução}
+	\thispagestyle{fancy}
+	A melhor escola do mundo é a Escola Superior de Tecnologia e Gestão (\acrshort{estg}).
+	Given a set of numbers, there are elementary methods to compute its \acrfull{gcd} which is abbreviated \acrshort{gcd}. This process 
+	is similar to that used for the \acrfull{lcm}.
+	
+	
+	\lipsum[1-2]
+	
+	
+	% Desenvolvimento
+	\chapter{Título do capítulo}
+	\thispagestyle{fancy}
+	\lipsum[3-5]This is a citation: \textcite{einstein1905}.
+	
+	\section{Título da secção}
+	\thispagestyle{fancy}
+	\lipsum[6-7]
+	
+	\subsection{Título da subsecção}
+	\thispagestyle{fancy}
+	\lipsum[8-9]Another citation: \parencite{latexcompanion}.
+	
+	% Conclusão
+	\chapter{Conclusão}
+	\thispagestyle{fancy}
+	\lipsum[10-11]
+	
+	% Referências Bibliográficas
+	\printbibliography[heading=bibintoc, title={Bibliografia}]
+	\thispagestyle{fancy}
+	
+	% Anexos
+	\appendix
+	%\chapter*{Anexos}
+	\chapter{Anexos}
+	\thispagestyle{fancy}
+	\lipsum[12-13]
+	
+	% Glossário
+	\chapter*{Glossário}
+	\thispagestyle{fancy}
+	\addcontentsline{toc}{chapter}{Glossário}
+	\lipsum[14]
+	
+\end{document}

@@ -1,0 +1,14 @@
+\babel@toc {portuguese}{}\relax 
+\contentsline {chapter}{Dedicatória}{ii}{chapter*.1}%
+\contentsline {chapter}{Agradecimentos}{iii}{chapter*.2}%
+\contentsline {chapter}{Resumo}{iv}{chapter*.3}%
+\contentsline {chapter}{Abstract}{v}{chapter*.4}%
+\contentsline {chapter}{Lista de siglas e acrónimos}{ix}{section*.8}%
+\contentsline {chapter}{\numberline {1}Introdução}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Título do capítulo}{2}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Título da secção}{2}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Título da subsecção}{3}{subsection.2.1.1}%
+\contentsline {chapter}{\numberline {3}Conclusão}{4}{chapter.3}%
+\contentsline {chapter}{Bibliografia}{5}{chapter*.10}%
+\contentsline {chapter}{\numberline {A}Anexos}{6}{appendix.A}%
+\contentsline {chapter}{Glossário}{7}{appendix*.11}%

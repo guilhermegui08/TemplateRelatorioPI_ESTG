@@ -1,0 +1,28 @@
+\glsdefs@newdocentry{estg}%
+{%
+name={ESTG},%
+sort={ESTG},%
+type={acronym},%
+first={Escola Superior de Tecnologia e Gestão\glsspace (ESTG)},%
+firstplural={Escola Superior de Tecnologia e Gestão\acrpluralsuffix \glsspace (ESTG\acrpluralsuffix )},%
+text={ESTG},%
+plural={ESTG\acrpluralsuffix },%
+description={Escola Superior de Tecnologia e Gestão},%
+descriptionplural={Escola Superior de Tecnologia e Gestão\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Escola Superior de Tecnologia e Gestão},%
+longplural={Escola Superior de Tecnologia e Gestãos},%
+short={ESTG},%
+shortplural={ESTGs},%
+counter={page},%
+parent={},%
+%
+}%
+
